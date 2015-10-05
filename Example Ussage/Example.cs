@@ -18,7 +18,7 @@
             foreach (var s in students)
             {
                 Console.WriteLine(s);
-                Console.WriteLine(s.GroupNumber);
+                Console.WriteLine("Group: {0}\n", s.GroupNumber);
             }
         }
     }
