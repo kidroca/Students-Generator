@@ -23,7 +23,7 @@ namespace FunctionalProgramming
     {
         static void Main()
         {
-            var generator = new SimpleGenerator("../");
+            var generator = new SimpleGenerator();
 
             IList<Student> students = generator.Genereate(10);
 
