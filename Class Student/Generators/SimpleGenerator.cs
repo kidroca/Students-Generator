@@ -95,7 +95,7 @@
                     Age = random.Next(MinAge, MaxAge),
                     GroupNumber = random.Next(MinGroup, MaxGroup),
                     Phone = this.GeneratePhone(),
-                    marks = this.GenerateMarks()
+                    MarksList = this.GenerateMarks()
                 };
 
                 return student;

@@ -6,11 +6,11 @@
 
     public class Student
     {
+        internal IList<int> MarksList;
+
         private static int nextId = 1;
 
         private int facultyNumber;
-
-        internal IList<int> marks;
 
         public Student(
             string fname, string lname, int age, int groupNumber) : this()
@@ -49,13 +49,13 @@
         {
             get
             {
-                if (this.marks == null)
+                if (this.MarksList == null)
                 {
                     return null;
                 }
                 else
                 {
-                    return this.marks.Take(this.marks.Count).ToArray();
+                    return this.MarksList.Take(this.MarksList.Count).ToArray();
                 }
             }
         }
@@ -80,12 +80,12 @@
 
         public void AddMark(int mark)
         {
-            this.marks.Add(mark);
+            this.MarksList.Add(mark);
         }
 
         public void RemoveMark(int mark)
         {
-            this.marks.Remove(mark);
+            this.MarksList.Remove(mark);
         }
     }
 }
