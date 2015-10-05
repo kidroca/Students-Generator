@@ -1,0 +1,5 @@
+C:\Users\kidroca\Desktop\kidroca workspace\Current Homework\Functional Programming\Class Student\bin\Debug\Class Student.dll
+C:\Users\kidroca\Desktop\kidroca workspace\Current Homework\Functional Programming\Class Student\bin\Debug\Class Student.pdb
+C:\Users\kidroca\Desktop\kidroca workspace\Current Homework\Functional Programming\Class Student\obj\Debug\T1 Class Student.csprojResolveAssemblyReference.cache
+C:\Users\kidroca\Desktop\kidroca workspace\Current Homework\Functional Programming\Class Student\obj\Debug\Class Student.dll
+C:\Users\kidroca\Desktop\kidroca workspace\Current Homework\Functional Programming\Class Student\obj\Debug\Class Student.pdb
