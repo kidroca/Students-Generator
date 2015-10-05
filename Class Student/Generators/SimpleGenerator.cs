@@ -48,14 +48,9 @@
             }
         }
 
-
-
-        public IList<Student> Genereate(int count, int startLine = 1, IList<Student> list = null)
+        public IList<Student> Genereate(int count, int startLine = 1)
         {
-            if (list == null)
-            {
-                list = new List<Student>();
-            }
+            var list = new List<Student>();
 
             using (var textReader = new StreamReader(this.dataFilePath))
             {
@@ -64,7 +59,7 @@
                 {
                     textReader.ReadLine();
                 }
-                
+                                
                 string currentLine;
                 while ((currentLine = textReader.ReadLine()) != null && count > 0)
                 {

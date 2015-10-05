@@ -40,9 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DetailedStudent.cs" />
-    <Compile Include="EnumGender.cs" />
-    <Compile Include="EnumStudentType.cs" />
     <Compile Include="Generators\SimpleGenerator.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
