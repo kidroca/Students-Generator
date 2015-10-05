@@ -116,15 +116,14 @@
 
         private string GeneratePhone()
         {
-            var phone = new char[10];
-            phone[0] = '+';
+            var phone = new int[7];
 
-            for (int i = 1; i < phone.Length; i++)
+            for (int i = 0; i < phone.Length; i++)
             {
-                phone[i] = Convert.ToChar(random.Next(0, 10));
+                phone[i] = random.Next(0, 10);
             }
 
-            return phone.ToString();
+            return "+359" + string.Join("", phone);
         }
     }
 }
