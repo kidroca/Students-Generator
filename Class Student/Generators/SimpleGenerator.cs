@@ -6,8 +6,6 @@
 
     public class SimpleGenerator
     {
-        private static Random random = new Random();
-
         private const int MinAge = 10;
 
         private const int MaxAge = 111;
@@ -16,9 +14,22 @@
 
         private const int MaxGroup = 11;
 
+        private static Random random = new Random();
+
         private string dataFilePath;
 
         private string[] dataSplitPattern = { " ", "\t" };
+
+        public SimpleGenerator(
+            string txtFilePath = "../../../Students-data.txt", string[] splitPattern = null)
+        {
+            this.DataFilePath = txtFilePath;
+
+            if (splitPattern != null)
+            {
+                this.dataSplitPattern = splitPattern;
+            }
+        }
 
         private string DataFilePath
         {
@@ -33,18 +44,6 @@
                     Console.WriteLine("Invlaid Path, try again: ");
                     this.DataFilePath = Console.ReadLine();
                 }
-                
-            }
-        }
-
-        public SimpleGenerator(
-            string txtFilePath = "../../../Students-data.txt", string[] splitPattern = null)
-        {
-            this.DataFilePath = txtFilePath;
-
-            if (splitPattern != null)
-            {
-                this.dataSplitPattern = splitPattern;
             }
         }
 
@@ -66,7 +65,7 @@
                     count--;
 
                     string[] data = currentLine.Split(
-                        dataSplitPattern, StringSplitOptions.RemoveEmptyEntries);
+                        this.dataSplitPattern, StringSplitOptions.RemoveEmptyEntries);
 
                     Student current = this.StudentParser(data);
                     if (current != null)
@@ -95,8 +94,8 @@
                     Email = textData[3],
                     Age = random.Next(MinAge, MaxAge),
                     GroupNumber = random.Next(MinGroup, MaxGroup),
-                    Phone = GeneratePhone(),
-                    marks = GenerateMarks()
+                    Phone = this.GeneratePhone(),
+                    marks = this.GenerateMarks()
                 };
 
                 return student;

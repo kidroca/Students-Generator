@@ -12,14 +12,6 @@
 
         internal IList<int> marks;
 
-        /// <summary>
-        /// Internal constructor to be used by the generators
-        /// </summary>
-        internal Student()
-        {
-            this.facultyNumber = nextId++;
-        }
-
         public Student(
             string fname, string lname, int age, int groupNumber) : this()
         {
@@ -29,6 +21,14 @@
             this.GroupNumber = groupNumber;
         }
 
+        /// <summary>
+        /// Internal constructor to be used by the generators
+        /// </summary>
+        internal Student()
+        {
+            this.facultyNumber = nextId++;
+        }
+        
         public string FirstName { get; internal set; }
 
         public string LastName { get; internal set; }
