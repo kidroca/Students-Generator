@@ -1,7 +1,7 @@
 ﻿
 namespace FunctionalProgramming.Students
 {
-    using FunctionalProgramming.Students.Enumerations;
+    using Enumerations;
 
     public class XcelStudent : Student
     {
@@ -22,5 +22,19 @@ namespace FunctionalProgramming.Students
         public double Attendance { get; set; }
 
         public double Bonus { get; set; }
+
+        public double CalculateResult()
+        {
+            double result =
+                (this.ExamResult +
+                this.HomeworksSent +
+                this.HomeworksEvaluated +
+                this.Teamwork +
+                this.Attendance +
+                this.Bonus) /
+                5;
+
+            return result;
+        }
     }
 }
