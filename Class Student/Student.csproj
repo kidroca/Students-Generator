@@ -40,9 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enumerations\EnumGender.cs" />
+    <Compile Include="Enumerations\EnumStudentType.cs" />
     <Compile Include="Generators\SimpleGenerator.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XcelStudent.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
