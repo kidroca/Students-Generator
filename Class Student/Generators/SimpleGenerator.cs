@@ -16,6 +16,8 @@
 
         private static Random random = new Random();
 
+        private static int nextStudentId = 1;
+
         private string dataFilePath;
 
         private string[] dataSplitPattern = { " ", "\t" };
@@ -92,6 +94,7 @@
                     FirstName = textData[1],
                     LastName = textData[2],
                     Email = textData[3],
+                    FacultyNumber = nextStudentId++,
                     Age = random.Next(MinAge, MaxAge),
                     GroupNumber = random.Next(MinGroup, MaxGroup),
                     Phone = this.GeneratePhone(),

@@ -8,12 +8,8 @@
     {
         internal IList<int> MarksList;
 
-        private static int nextId = 1;
-
-        private int facultyNumber;
-
         public Student(
-            string fname, string lname, int age, int groupNumber) : this()
+            string fname, string lname, int age, int groupNumber)
         {
             this.FirstName = fname;
             this.LastName = lname;
@@ -26,7 +22,6 @@
         /// </summary>
         internal Student()
         {
-            this.facultyNumber = nextId++;
         }
         
         public string FirstName { get; internal set; }
@@ -35,13 +30,7 @@
 
         public int Age { get; internal set; }
 
-        public int FacultyNumber
-        {
-            get
-            {
-                return this.facultyNumber;
-            }
-        }
+        public int FacultyNumber { get; internal set; }
 
         public string Phone { get; set; }
 
