@@ -1,7 +1,8 @@
 ﻿namespace FunctionalProgramming
 {
-    using System;
+   using System;
     using System.Collections.Generic;
+    using System.Linq;
     using Students;
     using Students.Generators;
 
@@ -20,6 +21,18 @@
                 Console.WriteLine(s);
                 Console.WriteLine("Group: {0}\n", s.GroupNumber);
             }
+
+            var textDocParser = new TextDocumentParser();
+
+            IList<XcelStudent> xcelStudents = 
+                textDocParser.Genereate(10, 10).Cast<XcelStudent>().ToList();
+
+            foreach (var s in xcelStudents)
+            {
+                Console.WriteLine(s);
+                Console.WriteLine("Type: {0}\n", s.StudentType);
+            }
+
         }
     }
 }
