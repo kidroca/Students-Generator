@@ -43,6 +43,7 @@
     <Compile Include="Enumerations\EnumGender.cs" />
     <Compile Include="Enumerations\EnumStudentType.cs" />
     <Compile Include="Generators\SimpleGenerator.cs" />
+    <Compile Include="Generators\TextDocumentParser.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XcelStudent.cs" />
