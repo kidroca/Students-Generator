@@ -60,7 +60,9 @@
             var strBuilder = new StringBuilder();
 
             strBuilder
-                .AppendFormat("Student: {0}\n", this.FacultyNumber)
+                .AppendFormat(
+                "Student: {0}\n"
+                , this.FacultyNumber != 0 ? this.FacultyNumber.ToString() : string.Empty)
                 .AppendFormat("Name: {0} {1}\n".PadLeft(padding), this.FirstName, this.LastName)
                 .AppendFormat("Email: {0}".PadLeft(padding), this.Email);
 
