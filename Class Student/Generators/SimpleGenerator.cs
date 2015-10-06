@@ -20,7 +20,7 @@
 
         private string dataFilePath;
 
-        private string[] dataSplitPattern = { " ", "\t" };
+        private string[] dataSplitPattern = { "\t", " " };
 
         public SimpleGenerator(
             string txtFilePath = "../../../Students-data.txt", string[] splitPattern = null)
