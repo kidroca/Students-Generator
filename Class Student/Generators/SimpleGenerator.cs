@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
 
     public class SimpleGenerator
     {
@@ -12,11 +13,13 @@
 
         private const int MinGroup = 1;
 
-        private const int MaxGroup = 11;
+        private const int MaxGroup = 6;
 
         private static Random random = new Random();
 
         private static int nextStudentId = 1;
+
+        private string[] headerLine;
 
         private string dataFilePath;
 
@@ -49,14 +52,26 @@
             }
         }
 
+        public string[] HeaderLine
+        {
+            get
+            {
+                return this.headerLine.Take(this.headerLine.Count()).ToArray();
+            }
+        }
+
         public IList<Student> Genereate(int count, int startLine = 1)
         {
             var list = new List<Student>();
 
             using (var textReader = new StreamReader(this.dataFilePath))
             {
+                //Set headerLine 
+                headerLine = textReader.ReadLine().Split(
+                    this.dataSplitPattern, StringSplitOptions.RemoveEmptyEntries);
+
                 // Skip to line
-                for (int i = 0; i < startLine; i++)
+                for (int i = 1; i < startLine; i++)
                 {
                     textReader.ReadLine();
                 }
